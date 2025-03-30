@@ -69,12 +69,12 @@ export class OrderFormComponent implements OnInit  {
   }
 
   private onSuccess() {
-    this.snackBar.open('Order salva com sucesso!', '', { duration: 5000 });
+    this.snackBar.open('Order saved successfully!', '', { duration: 5000 });
     this.onCancel();
   }
 
   private onError() {
-    this.snackBar.open('Erro ao salvar order.', '', { duration: 5000 });
+    this.snackBar.open('Error saving order.', '', { duration: 5000 });
   }
 
 
