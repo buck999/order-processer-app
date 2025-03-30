@@ -1,6 +1,6 @@
 # Async Order Processer and Management
 
-This is an Angular-based web application for working directly with the NodeJS project [Async Order Processer](https://link-url-here.org) managing and processing orders asynchronously. It includes features like order creation, visualization and pagination. The project is built with Angular Material for UI components and supports server-side rendering (SSR) for improved performance.
+This is an Angular-based web application for working directly with the NodeJS project [Async Order Processer](https://github.com/buck999/order-processer) managing and processing orders asynchronously. It includes features like order creation, visualization and pagination. The project is built with Angular Material for UI components and supports server-side rendering (SSR) for improved performance.
 ## Features
 
 - **Order Management**: Create and view orders.
