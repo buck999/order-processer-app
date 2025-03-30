@@ -1,0 +1,39 @@
+
+<mat-card>
+  <mat-toolbar>Orders</mat-toolbar>
+
+  @if (orders$ | async; as orders) {
+    <div class="example-container mat-elevation-z8">
+      <app-orders-list
+        [orders]="orders.orders"
+        (add)="onAdd()"
+        (edit)="onEdit($event)"
+        (remove)="onRemove($event)"
+      ></app-orders-list>
+
+      <mat-paginator
+        (page)="refresh($event)"
+        [length]="orders.totalElements"
+        [pageSize]="pageSize"
+        showFirstLastButtons
+        [pageSizeOptions]="[5, 10, 15]"
+        [pageIndex]="pageIndex"
+        aria-label="Select page of orders">
+      </mat-paginator>
+    </div>
+  } @else {
+    <div class="loading-spinner">
+      <mat-spinner></mat-spinner>
+    </div>
+  }
+
+  <mat-card-actions class="actions-center">
+    <button mat-raised-button color="primary" (click)="onAdd()">
+      Criar Order
+    </button>
+  </mat-card-actions>
+
+
+</mat-card>
+
+

@@ -1,0 +1,25 @@
+<mat-card>
+  <mat-toolbar>Detalhes da Order</mat-toolbar>
+
+  <mat-card-content>
+    <form [formGroup]="form" class="min-width">
+      <mat-form-field class="full-width">
+        <mat-label>Task</mat-label>
+        <input matInput formControlName="task" #task />
+        <mat-hint align="end">{{ task.value.length || 0 }} / 100</mat-hint>
+        @if (form.get('task')?.invalid) {
+          <mat-error>{{ formUtils.getErrorMessage(form, "task")}}</mat-error>
+        }
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+
+  <mat-card-actions class="actions-center">
+    <button mat-raised-button color="primary" (click)="onSubmit()">
+      Salvar
+    </button>
+    <button mat-raised-button (click)="onCancel()" class="btn-space">
+      Cancelar
+    </button>
+  </mat-card-actions>
+</mat-card>
